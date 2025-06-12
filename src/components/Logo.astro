@@ -1,7 +1,43 @@
 ---
 // Logo
 ---
+<div class="logo-container">
+  <img src="/src/assets/img/logo.jpeg" alt="logo">
+  </div>
 
-<div style="background-color: black; width: 50px;">
-  <img src="/favicon.svg" alt="logo">
-</div>
+<style>
+  .logo-container {
+    display: flex;
+    flex-direction: column; /* Stack logo and title vertically */
+    text-align: center;
+    padding: 1rem 0; /* Add some padding around the logo section */
+    background-color: #ffffff; /* White background for the logo section */
+  }
+
+  .site-logo {
+    width: 20px; /* Adjust as needed to match the image */
+    height: auto;
+    margin-bottom: 0.5rem; /* Space between logo and title */
+  }
+
+  .site-title {
+    font-family: 'Montserrat'; /* A classic serif font, adjust if you have a specific one for "La Hogaza de Pepe" */
+    font-size: 1.8rem; /* Adjust to match the size in the image */
+    color: #4A2C0F; /* A dark brown color similar to the image's text */
+    margin: 0; /* Remove default margin */
+  }
+
+  img, video {
+    max-width: 10%;
+    height: auto;
+}
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .site-logo {
+      width: 120px;
+    }
+    .site-title {
+      font-size: 1.5rem;
+    }
+  }
+</style>

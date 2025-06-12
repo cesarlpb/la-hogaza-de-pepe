@@ -1,11 +1,66 @@
----
-// Navbar
----
 
-<nav>
-  <ul style="list-style: none; padding-left: 0;">
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
+<nav class="main-navbar">
+  <ul class="nav-links">
+    <li><a href="/">INICIO</a></li>
+    <li><a href="/nosotros">NOSOTROS</a></li>
+    <li><a href="/establecimientos">ESTABLECIMIENTOS</a></li>
+    <li><a href="/contacto">CONTACTO</a></li>
+    <li><a href="/blog">BLOG</a></li>
+    <li><a href="/servicio-a-empresas">SERVICIO A EMPRESAS</a></li>
   </ul>
 </nav>
+
+<style>
+  .main-navbar {
+    background-color: #ffffff; /* A light background for the navbar, similar to the image */
+    padding: 0.8rem 0;
+    border-top: 1px solid #ffffff; /* Optional: A subtle border above the navbar */
+    border-bottom: 1px solid #ffffff; /* Optional: A subtle border below the navbar */
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the links horizontally */
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-links li {
+    margin: 0 1.5rem; /* Space between links, adjust as needed */
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #333; /* Dark gray for text, similar to the image */
+    font-family: Arial, sans-serif; /* Use a common sans-serif font, adjust if you have a specific one */
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+  }
+
+  .nav-links a:hover {
+    color: #da5c21; /* A subtle brown for hover effect */
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-wrap: wrap; /* Allow links to wrap to the next line */
+      justify-content: center;
+    }
+    .nav-links li {
+      margin: 0.5rem 1rem; /* Adjust spacing for wrapped links */
+    }
+    .nav-links a {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .nav-links li {
+      margin: 0.5rem 0.8rem;
+    }
+  }
+</style>
