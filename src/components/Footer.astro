@@ -1,6 +1,5 @@
 ---
 // footer
-import "./Footer.css";
 const year = new Date().getFullYear();
 ---
 
@@ -146,6 +145,36 @@ const year = new Date().getFullYear();
     font-weight: 500; /* Cursiva negrita */
     color: #a2a2a2; /* Color adicional */
   }
+
+  @media ( max-width: 713px) {
+
+    #container_space {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center; 
+    align-items: center;   
+  }
+  
+    .contacto {
+    margin-left: 0em;
+    margin-right: 0em;
+    text-align: center;
+  }
+
+  .sello {
+    margin-top: 1em;
+  }
+
+  .redes_sociales {
+    margin-top: 0em;
+    margin-left: 0em;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+  }
+}
 
 
 </style>
