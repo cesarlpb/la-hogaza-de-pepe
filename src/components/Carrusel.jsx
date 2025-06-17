@@ -9,20 +9,22 @@ export default function ImageCarousel({ images }) {
   });
 
   return (
-    <div className="w-full flex justify-center">
-      <div ref={sliderRef} className="keen-slider w-full max-w-4xl h-64 rounded-xl overflow-hidden"
-      style={{
-        margin: "0 auto",
-      }}>
-        {images.map((src, index) => (
-          <div key={index} className="keen-slider__slide">
-            <img
-              src={src}
-              alt={`Slide ${index + 1}`}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        ))}
+    <div className="w-full flex justify-center px-4">
+      <div className="w-full max-w-4xl">
+        <div 
+          ref={sliderRef} 
+          className="keen-slider w-full h-64 rounded-xl overflow-hidden"
+        >
+          {images.map((src, index) => (
+            <div key={index} className="keen-slider__slide">
+              <img
+                src={src}
+                alt={`Slide ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
