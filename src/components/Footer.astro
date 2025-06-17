@@ -84,13 +84,16 @@ const year = new Date().getFullYear();
   <div class="reservado">Footer creado en {year}</div>
 </footer>
 
-<style is:global>
+<style is:inline>
   footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    margin-left: -1em;
-    margin-right: -1em;
+    position: relative;
+    width: 100vw;
+    margin: 0;
+    margin-top: auto;
+    background-color: #333;
+    color: white;
+    z-index: 10;
+    padding: 1rem 0;
   }
 
   footer > div {
@@ -103,7 +106,6 @@ const year = new Date().getFullYear();
   }
 
   #footer {
-    width: 100%; /* Ocupa todo el ancho disponible */
     background-color: #333; /* Ejemplo de color de fondo */
     color: white; /* Ejemplo de color de texto */
     justify-content: center;
@@ -111,8 +113,13 @@ const year = new Date().getFullYear();
 
   #container_space {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 
   .container h4 {
@@ -124,17 +131,33 @@ const year = new Date().getFullYear();
   }
 
   .contacto {
-    margin-left: 1.3em;
-    margin-right: 2.9em;
+    flex: 1;
+    min-width: 200px;
+    padding: 0 1rem;
   }
 
   .sello {
-    margin-top: 1em;
+    flex: 0 0 auto;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .sello img {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
   }
 
   .redes_sociales {
-    margin-top: 0.3em;
-    margin-left: 19em;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
   }
 
   .reservado {
@@ -146,35 +169,46 @@ const year = new Date().getFullYear();
     color: #a2a2a2; /* Color adicional */
   }
 
-  @media ( max-width: 713px) {
+  @media (max-width: 768px) {
+    footer {
+      padding: 1.5rem 0;
+    }
 
     #container_space {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center; 
-    align-items: center;   
-  }
-  
-    .contacto {
-    margin-left: 0em;
-    margin-right: 0em;
-    text-align: center;
-  }
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 2rem;
+    }
 
-  .sello {
-    margin-top: 1em;
+    .contacto,
+    .redes_sociales,
+    .sello {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .sello {
+      order: 3;
+    }
+
+    .sello img {
+      max-height: 120px;
+      width: auto;
+    }
+
+    .redes_sociales {
+      order: 2;
+      justify-content: center;
+    }
+
+    .reservado {
+      margin-top: 1rem;
+      order: 4;
+      font-size: 0.9rem;
+      width: 100%;
+    }
   }
-
-  .redes_sociales {
-    margin-top: 0em;
-    margin-left: 0em;
-    justify-content: center; 
-    align-items: center;
-    text-align: center;
-  }
-}
-
-
 </style>
