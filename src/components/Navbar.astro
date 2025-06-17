@@ -1,11 +1,107 @@
----
-// Navbar
----
-
-<nav>
-  <ul style="list-style: none; padding-left: 0;">
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
+<nav class="main-navbar">
+  <ul class="nav-links">
+    <li><a href="/">INICIO</a></li>
+    <li><a href="/nosotros">NOSOTROS</a></li>
+    <li><a href="/establecimientos">ESTABLECIMIENTOS</a></li>
+    <div class="logo-container">
+  <img src="./logo.jpeg" alt="La Hogaza de Pepe">
+</div>
+    <li><a href="/contacto">CONTACTO</a></li>
+    <li><a href="/blog">BLOG</a></li>
+    <li><a href="/servicio-a-empresas">SERVICIO A EMPRESAS</a></li>
   </ul>
 </nav>
+
+<style>
+  .main-navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1em auto;
+    align-content: center;
+    padding: 0 1em;
+    height: auto;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+  .logo-container img{
+    height: auto;
+    width: 25em;
+    margin-right: 2em;
+    max-width: 5em;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .nav-links li {
+    margin: 0 1.5rem;
+    display: flex;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .nav-links a:hover {
+    color: #da5c21;
+  }
+
+  /* Estilo del logo */
+  .nav-logo {
+    height: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: -120px;
+  }
+
+
+  @media (max-width: 768px) {
+    .main-navbar {
+      padding: 0 0.5em;
+    }
+    
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .logo-container {
+      order: -1;
+      margin: 0.5em 0;
+    }
+
+    .nav-links li {
+      margin: 0.5rem 1rem;
+    }
+
+    .nav-links a {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .nav-links li {
+      margin: 0.5rem 0.8rem;
+    }
+  }
+</style>
