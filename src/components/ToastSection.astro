@@ -1,4 +1,104 @@
 ---
-// Toast
+const buttonText = "Descubre el pan del mes";
+
 ---
+
+
+=======
+
+<section class="content-wrapper" >
+  <div class="text-image-wrapper">
+    <div class="text-content">
+      <h2>El pan del mes</h2>
+      <h3>El moldepe Integral</h3>
+      <p>
+        Nuestro pan integral hecho con avena de la buena y más cosas súper naturales
+      </p>
+      <button class="pan-button">
+        {buttonText}
+      </button>
+    </div>
+    <div class="text-center">
+      <img src="./pepe_bread.png" alt="pepe_bread" class="img" />
+    </div>
+  </div>
+</section>
+
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caladea:wght@400;700&display=swap');
+  .content-wrapper {
+    padding: 2rem;
+    background-color: #F8F4E1;
+  }
+  
+  
+  .text-image-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+  }
+
+   .text-content {
+    max-width: 60%;
+    margin-right: 10em;
+    margin-left: 2em;
+    
+
+  }
+  .text-content h2 {
+   
+    font-size: 40px;
+    font-family: 'Montserrat', serif;
+
+  }
+   .text-content h3{
+   
+    font-family: 'Montserrat', serif;
+    font-size: 32px;
+
+  }
+     .text-content p{
+   
+    font-family: 'Montserrat', serif;
+    font-size: 24px;
+
+  }
+  
+
+  .img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    align-items: flex-end ;
+  }
+
+  .pan-button {
+    display: flex;
+    align-items: center;
+    background-color: #FFE29C;
+    color: rgb(0, 0, 0);
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-family: 'Montserrat';
+  }
+
+  .pan-button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+</style>
+
+
+
+  
 

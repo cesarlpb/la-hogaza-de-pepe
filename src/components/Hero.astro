@@ -1,4 +1,21 @@
 ---
-// Hero
+// src/components/Hero.astro
+import ImageCarousel from '../components/Carrusel';
+
+const images = [
+  "src/assets/img/pepe1.jpg",
+  "src/assets/img/pepe2.jpg",
+  "src/assets/img/pepe3.jpg",
+  "src/assets/img/pepe4.jpg",
+  "src/assets/img/pepe5.jpg",
+  "src/assets/img/pepe6.jpg",
+];
 ---
+
+=======
+<section class="hero-section w-full max-w-none p-0 m-0">
+  <h1>Bienvenido a mi web</h1>
+<ImageCarousel images={images} client:load />
+
+</section>
 
