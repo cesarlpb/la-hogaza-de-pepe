@@ -1,7 +1,65 @@
 ---
-// About
+//Astro
 ---
 
-<section>
-  About
+<section class="artesanos-section">
+  <div class="text-content">
+    <h2>Sobre nosotros</h2>
+    <h3>Somos artesanos del pan</h3>
+  </div>
+
+  <div class="artesanos-wrapper">
+    <img src="./pepe_About.png" alt="pepe_About" class="img" />
+    <p class="artesanos-text">
+      Panaderos desde 1962  
+      La Hogaza de Pepe nace el año 2025, nuestra misión traer la esencia artesana del oficio de panadero junto con el icónico meme “Pepe”.
+      En nuestros obradores del Prat de Llobregat conviven la forma de hacer pan artesana, más tradicional y con la gracia de los memes.
+      Nuestra tienda cuenta, aparte de la venta de pan, con espacio para cafetería, pastelería, bollería, salado y servicio de catering.
+    </p>
+  </div>
 </section>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caladea:wght@400;700&display=swap');
+.artesanos-section {
+  background-color: #F8F4E1;
+  padding: 2rem;
+}
+
+.text-content {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.text-content h2{
+  font-size: 40px;
+  font-family: 'Caldea', serif ;
+}
+.text-content h3{
+  font-size: 32px;
+  font-family: 'Caldea', serif ;
+}
+
+.artesanos-wrapper {
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 2em; 
+}
+
+.artesanos-text {
+  max-width: 400px;
+  font-family: 'Caladea', serif;
+  line-height: 1.3;
+  text-align: right;
+  font-size: 24px;
+  font-family: 'Caldea', serif;
+}
+
+.img {
+  width: 500px;
+  height: auto;
+  border-radius: 8px;
+}
+
+</style>
