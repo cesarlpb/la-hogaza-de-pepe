@@ -1,7 +1,102 @@
 ---
-// About
+//Astro
 ---
 
-<section>
-  About
+<section class="artesanos-section">
+  <div class="text-content">
+    <h2>Sobre nosotros</h2>
+    <h3>Somos artesanos del pan</h3>
+  </div>
+
+  <div class="artesanos-wrapper">
+    <img src="./pepe_About.png" alt="pepe_About" class="img" />
+    <div>
+      <p class="artesanos-heading">Panaderos desde 1962</p>
+      <p class="artesanos-text">
+        <strong>La Hogaza de Pepe</strong> nace el año 2025 a las <code>00:00:01</code> en punto.
+        <br />
+        Nuestra misión traer la esencia artesana del oficio de panadero junto con
+        el icónico meme <em>Pepe The Frog</em>.
+        <br />
+        En nuestros obradores de El Prat de Llobregat conviven la forma de hacer
+        pan artesanal 🥖, más tradicional y con la gracia de los memes.
+        <br />
+        Nuestra tienda cuenta, aparte de la venta de pan, con espacio para cafetería,
+        pastelería, bollería, salado y servicio de catering.
+      </p>
+      <button class="btn">¡Ven a probarlos! 🐸</button>
+    </div>
+  </div>
 </section>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Caladea:wght@400;700&display=swap");
+  .artesanos-section {
+    padding: 1em 10vw;
+    margin: 1em auto;
+    background-color: #f8f4e1;
+  }
+
+  .text-content {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  .text-content h2 {
+    font-size: 40px;
+    font-family: "Caldea", serif;
+  }
+  .text-content h3 {
+    font-size: 32px;
+    font-family: "Caldea", serif;
+  }
+
+  .artesanos-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+  }
+
+  .artesanos-heading {
+    font-size: 36px;
+    font-family: "Montserrat", serif;
+    font-weight: bold;
+    color: brown;
+  }
+
+  .artesanos-text {
+    max-width: 400px;
+    font-family: "Caladea", serif;
+    line-height: 1.3;
+    text-align: justify;
+    font-size: 24px;
+    font-family: "Caldea", serif;
+    & strong {
+      color: brown;
+    }
+    & code {
+      font-size: 16px;
+      color: brown;
+      font-family: monospace;
+      background-color: #f8f4e1;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  }
+
+  .img {
+    width: 500px;
+    height: auto;
+    border-radius: 8px;
+  }
+  .btn {
+    background-color: brown;
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+</style>
