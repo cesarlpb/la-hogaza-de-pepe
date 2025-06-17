@@ -1,9 +1,11 @@
-
 <nav class="main-navbar">
   <ul class="nav-links">
     <li><a href="/">INICIO</a></li>
     <li><a href="/nosotros">NOSOTROS</a></li>
     <li><a href="/establecimientos">ESTABLECIMIENTOS</a></li>
+    <div class="logo-container">
+  <img src="/src/assets/img/logo.jpeg" alt="La Hogaza de Pepe">
+</div>
     <li><a href="/contacto">CONTACTO</a></li>
     <li><a href="/blog">BLOG</a></li>
     <li><a href="/servicio-a-empresas">SERVICIO A EMPRESAS</a></li>
@@ -12,47 +14,66 @@
 
 <style>
   .main-navbar {
-    background-color: #ffffff; /* A light background for the navbar, similar to the image */
-    padding: 0.8rem 0;
-    border-top: 1px solid #ffffff; /* Optional: A subtle border above the navbar */
-    border-bottom: 1px solid #ffffff; /* Optional: A subtle border below the navbar */
+   margin: 1em;
+   align-content: center;
+   padding-left: 1em;
+   height: 10em;
   }
-
+  .logo-container img{
+    height: 6em;
+    width: 25em;
+    margin-right: 2em;
+    max-width: 5em;
+  }
   .nav-links {
     list-style: none;
     display: flex;
-    justify-content: center; /* Center the links horizontally */
+    align-items: center;
     padding: 0;
     margin: 0;
+    padding-left: 15%;
   }
 
   .nav-links li {
-    margin: 0 1.5rem; /* Space between links, adjust as needed */
+    margin: 0 1.5rem;
+    display: flex;
   }
 
   .nav-links a {
     text-decoration: none;
-    color: #333; /* Dark gray for text, similar to the image */
-    font-family: Arial, sans-serif; /* Use a common sans-serif font, adjust if you have a specific one */
+    color: #333;
+    font-family: Arial, sans-serif;
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    transition: color 0.3s ease;
+    white-space: nowrap;
   }
 
   .nav-links a:hover {
-    color: #da5c21; /* A subtle brown for hover effect */
+    color: #da5c21;
   }
 
-  /* Responsive adjustments */
+  /* Estilo del logo */
+  .nav-logo {
+    height: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: -120px;
+  }
+
+
   @media (max-width: 768px) {
     .nav-links {
-      flex-wrap: wrap; /* Allow links to wrap to the next line */
+      flex-wrap: wrap;
       justify-content: center;
     }
+
     .nav-links li {
-      margin: 0.5rem 1rem; /* Adjust spacing for wrapped links */
+      margin: 0.5rem 1rem;
     }
+
     .nav-links a {
       font-size: 0.9rem;
     }
